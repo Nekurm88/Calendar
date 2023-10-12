@@ -8,12 +8,11 @@
 
 .page .header {
     grid-area: header;
-    border: 10px solid blue;
+    
 }
 
 .page .sidebar {
     grid-area: sidebar;
-    border: 10px solid yellow;
 }
 
 .page .calendar {
