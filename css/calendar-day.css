@@ -16,6 +16,22 @@
     outline: none;
 }
 
+.calendarDay.is-secondary {
+    align-items: flex-start;
+
+
+}
+
+.calendarDay.calendarDay.is-secondary span:nth-of-type(1) {
+    color: var(--blue10);
+}
+
+.calendarDay.calendarDay.is-secondary span:nth-of-type(2) {
+    color: var(--gray10);
+    background: var(--blue10);
+}
+
+
 .calendarDay a:hover span:nth-of-type(2),
 .calendarDay a:focus span:nth-of-type(2) {
     background: var(--gray10);
@@ -56,4 +72,12 @@
 .calendarDay.is-selected span:nth-of-type(2) {
  background: var(--blue20);
  color: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+    .calendarDay a:hover span:nth-of-type(2),
+    .calendarDay a:focus span:nth-of-type(2) {
+      background: var(--gray10);
+      color: var(--white);
+    }
 }

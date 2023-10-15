@@ -46,6 +46,10 @@
         </div>
       </header>
       <div class="sidebar">
+        <button class="button is-rounded is is-shadowed">
+          <i class="icon-Iconplus" aria-hidden="true"></i>
+          <span>Crear</span>
+        </button>
         <div class="miniCalendar" aria-label="Calendario de navegación">
           <div class="miniCalendar-status">
             <time class="miniCalendar-date" datetime="2021-06">Junio 2021</time>
@@ -111,6 +115,28 @@
             <div class="miniCalendar-monthDay is-inactive">10</div>
             <div class="miniCalendar-monthDay is-inactive">11</div>
           </div>
+        </div>
+        <div class="sidebar-secondary">
+          <input class="searchbar" type="search" aria-label="Buscar personas" placeholder="Buscar personas">
+          <details class="calendarEvents">
+            <summary>Mis calendarios</summary>
+            <div class="option">
+              <input type="checkbox">
+              <label for="">Leonidas Esteban</label>
+            </div>
+            <div class="option">
+              <input type="checkbox">
+              <label for="">Cumpleaños</label>
+            </div>
+            <div class="option">
+              <input type="checkbox">
+              <label for="">Tareas</label>
+            </div>
+            <div class="option">
+              <input type="checkbox">
+              <label for="">Recordatorios</label>
+            </div>
+          </details>
         </div>
       </div>
       <main class="calendar">
@@ -390,5 +416,62 @@
         </div>
       </main>
     </div>
+    <dialog  class="modal">
+      <form class="createTask">
+        <div class="input is-outstanding">
+          <div class="input-body">
+            <input required name="title" type="text" placeholder="Añade un titulo">
+          </div>
+        </div>
+        <div class="input">
+          <i class="icon-Iconclock"></i>
+          <div class="input-body">
+            <input type="date" name="date" required>
+            <input type="time" name="time-start" required>
+            <input type="time" name="time-end" required>
+          </div>
+        </div>
+        <div class="input">
+            <i class="icon-Iconusers"></i>
+            <div class="input-body">
+              <input type="text" list="guest" name="guest" placeholder="Agregar Invitados" required>
+              <datalist id="guest"> 
+               <option value="Leonidas"></option>
+               <option value="Carlos"></option>
+               <option value="Miguel"></option>
+               <option value="Sandra"></option>
+               <option value="Cristopher"></option>
+              </datalist>
+            </div>
+        </div>
+        <div class="input">
+          <i class="icon-Icongps"></i>
+          <div class="input-body">
+            <input name="location" type="text" placeholder="Agregar Ubicación">
+          </div>
+        </div>
+        <div class="input">
+          <i class="icon-Iconhamburguer-button"></i>
+          <div class="input-body">
+            <input type="file" multiple>
+          </div>
+        </div>
+        <div class="input">
+          <i class="icon-Icontext"></i>
+          <div class="input-body">
+            <textarea name="Detalles" placeholder="Agregar Descripción" id="" cols="30" rows="2"></textarea>
+          </div>
+        </div>
+      </form>
+      <div class="modal-actions">
+        <button id="close-modal" class="button">
+          Cancelar
+        </button>
+        <button class="button is-primary">
+          Guardar
+        </button>
+      </div>
+    </dialog>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>

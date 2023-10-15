@@ -62,5 +62,11 @@
 }
 
 .button.is-shadowed {
+    transition: transform .2s;
     box-shadow: .08734px 2.52442px 7.4963px 0px rgba(0, 0, 0, 0.07), 0.41288px 11.9336px 29.3037px 0px rgba(0, 0, 0, 0.04), 1.0719px 30.98146px 92px 0px rgba(0, 0, 0, 0.03);
 }
+
+
+.button.is-shadowed {
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.433);
+  }

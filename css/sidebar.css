@@ -1,0 +1,76 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.sidebar-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.searchbar {
+    border: none;
+    font: var(--body1-regular);
+    background: var(--gray10);
+    color: var(--gray20);
+    padding-block: .625rem;
+    padding-inline-start: 2.5rem;
+    inline-size: 12.25rem;
+    block-size: 2.5rem;
+    border-radius: .25rem;
+    background-image: url(../icons/Icon=users.svg);
+    background-repeat: no-repeat;    
+    background-size: 1rem 1rem;
+    background-position: left 1rem center;
+}
+
+.sidebar-secondary summary {
+    font: var(--body1-medium);
+    padding-block: .25rem;
+    inline-size: 12.25rem;
+    display: block;
+    background-image: url(../icons/Icon=chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    outline: none;
+}
+
+.option input {
+    appearance: none;
+    inline-size: 1.5rem;
+    aspect-ratio: 1;
+    background-image: url(../icons/checkwhite.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+}
+
+.option input:checked {
+    background-image: url(../icons/checksquareWhite.svg);
+}
+
+.button.is-showed {
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.433);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .calendarEvents {
+        background-color: var(--gray30);
+        padding-inline-start: .5rem;
+    }
+    
+    .searchbar {
+        background-color: var(--gray30);
+        color: var(--gray10);
+    }
+    
+    .searchbar input::placeholder {
+        color: var(--gray50);
+    }
+
+}
